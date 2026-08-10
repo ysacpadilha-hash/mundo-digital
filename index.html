@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educação Digital: Além das Redes</title>
+    <!-- Vinculação do estilo CSS externo -->
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+
+    <!-- Fundo dinâmico com brilhos e gradiente -->
+    <div class="fundo-gradiente"></div>
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+
+
+    <!-- Cabeçalho principal -->
+    <header class="cabecalho">
+        <div class="logo">
+            <span class="icone-logo">⚡</span>
+            <div>
+                <h1>Educação Digital</h1>
+                <p class="subtitulo">Conectando Ideias, Construindo o Futuro</p>
+            </div>
+        </div>
+        <button id="btn-tema" class="btn-tema-glow" onclick="alternarTema()">
+            <span id="icone-tema">🌙</span> Modo Escuro
+        </button>
+    </header>
+
+
+    <!-- Conteúdo principal -->
+    <main class="conteudo-principal">
+
+
+        <!-- Banner de Boas-Vindas -->
+        <section class="card-glass hero-card">
+            <div class="hero-texto">
+                <span class="badge">Aviso de Conscientização</span>
+                <h2>Sua jornada além das redes sociais começa aqui</h2>
+                <p>Muitas pessoas acreditam que a internet serve apenas para assistir vídeos curtos, postar fotos e trocar mensagens. Mas o universo da computação é onde criamos softwares, gerenciamos negócios e resolvemos problemas do mundo real. <strong>Você está no comando!</strong></p>
+            </div>
+            <div class="hero-acao">
+                <button class="btn-glow" onclick="abrirModal('boas-vindas')">🚀 Testar Interação</button>
+            </div>
+        </section>
+
+
+        <!-- Grade de Recursos / Postagens -->
+        <div class="grid-cards">
+           
+            <article class="card-glass card-hover">
+                <div class="card-header">
+                    <span class="card-icon">🧠</span>
+                    <h3>Criador vs. Consumidor</h3>
+                </div>
+                <p>Consumir conteúdo é fácil e rápido. Criar conteúdo e programar sistemas exige lógica, criatividade e autonomia. A Educação Digital transforma você em um autor no mundo tecnológico.</p>
+                <div class="card-footer">
+                    <button class="btn-link" onclick="abrirModal('criador')">Saber mais &rarr;</button>
+                </div>
+            </article>
+
+
+            <article class="card-glass card-hover">
+                <div class="card-header">
+                    <span class="card-icon">🛡️</span>
+                    <h3>Ética e Autoria</h3>
+                </div>
+                <p>Tudo o que está na internet foi criado por alguém. Respeitar direitos autorais, citar fontes e colaborar em projetos de código aberto são pilares da cidadania digital consciente.</p>
+                <div class="card-footer">
+                    <button class="btn-link" onclick="abrirModal('etica')">Saber mais &rarr;</button>
+                </div>
+            </article>
+
+
+            <article class="card-glass card-hover">
+                <div class="card-header">
+                    <span class="card-icon">⚙️</span>
+                    <h3>Lógica & Automação</h3>
+                </div>
+                <p>Cada clique em um aplicativo dispara linhas de código como as que você está usando nesta página. Compreender a lógica por trás da tela te dá controle total sobre a tecnologia.</p>
+                <div class="card-footer">
+                    <button class="btn-link" onclick="abrirModal('logica')">Saber mais &rarr;</button>
+                </div>
+            </article>
+
+
+        </div>
+
+
+        <!-- Seção Interativa do Quiz -->
+        <section class="card-glass quiz-card">
+            <div class="quiz-header">
+                <div>
+                    <h2>🎮 Quiz Interativo: Desafio Digital</h2>
+                    <p>Responda às perguntas e veja o código funcionando em tempo real com efeitos sonoros e pontuação!</p>
+                </div>
+                <div class="placar">
+                    <span>Pontos: <strong id="pontuacao">0</strong></span>
+                </div>
+            </div>
+
+
+            <!-- Barra de Progresso do Quiz -->
+            <div class="barra-progresso-container">
+                <div id="barra-progresso" class="barra-progresso-preenchimento"></div>
+            </div>
+
+
+            <div id="container-quiz">
+                <h3 id="pergunta-texto" class="pergunta">Carregando pergunta...</h3>
+                <div id="opcoes-container" class="grid-opcoes">
+                    <!-- As opções de botões são inseridas dinamicamente via JavaScript -->
+                </div>
+                <div id="feedback-caixa" class="feedback-caixa feedback-oculto">
+                    <p id="feedback-texto"></p>
+                    <button id="btn-proxima" class="btn-glow" onclick="proximaPergunta()">Próxima Pergunta ➔</button>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <p>Projeto Desenvolvido Colaborativamente pela 1ª Série do Ensino Médio • 2026</p>
+    </footer>
+
+
+    <!-- Janela Pop-up Modal (Interação Real) -->
+    <div id="modal-container" class="modal-backdrop modal-oculto">
+        <div class="modal-card card-glass">
+            <button class="btn-fechar-modal" onclick="fecharModal()">✕</button>
+            <div class="modal-body">
+                <span id="modal-icone" class="modal-icone">✨</span>
+                <h3 id="modal-titulo">Título da Interação</h3>
+                <p id="modal-texto">Mensagem explicativa aqui...</p>
+                <button class="btn-glow" onclick="fecharModal()">Entendi!</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Vinculação do arquivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
